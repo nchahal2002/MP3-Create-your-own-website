@@ -23,18 +23,21 @@
         <main>
             <h2>Sign Up Form</h2>
 
-            <form action="/submit_signup" method="post">
-                <div class="container">
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email Address" name="email" required>
+            <form action="/signup" method="post">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                </div>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit" value="SignUp">SignUp</button>
             </form>
+
+            <script src="index.js"></script>
         </main>
-        <li>
-            <a href="login.html">If you are a member, click here to login!</a>
-        </li>
+        <ul>
+            <li>
+                <a href="login.html">If you are a member, click here to login!</a>
+            </li>
+        </ul>
     </body>
 </html>

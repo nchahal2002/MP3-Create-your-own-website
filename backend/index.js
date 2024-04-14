@@ -4,14 +4,19 @@ const bcrypt = require('bcrypt');
 const pgp = require('pg-promise')();
 
 // Database connection details
-const db = pgp({
+const db =  pgp({
     host: 'localhost',
     port: 5432,
-    database: 'your_database',
-    user: 'your_username',
-    password: 'your_password'
+    database: 'Chahals_bank_auth',
+    user: 'postgres',
+    password: 'Microlite3@'
 });
 
+/*pgp.connect()
+    .then(() => console.log('Connected to PostgreSQL database'))
+    .catch(error => console.error('Error connecting to PostgreSQL database', error));
+
+*/
 app.use(express.json());
 
 app.post('/signup', async (req, res) => {
@@ -36,5 +41,6 @@ app.post('/login', async (req, res) => {
         res.status(500).send();
     }
 });
+
 
 app.listen(3000);
