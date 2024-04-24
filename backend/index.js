@@ -30,6 +30,7 @@ app.post('/signup', async (req, res) => {
 });
 
 app.post('/login', async (req, res) => {
+    print("I am here")
     try {
         const user = await db.one('SELECT * FROM users WHERE username = $1', [req.body.username]);
         if (await bcrypt.compare(req.body.password, user.password)) {
