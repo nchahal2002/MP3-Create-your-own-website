@@ -20,8 +20,27 @@
     </style>
 </head>
 <body>
+    <script>
+        // function to get URL parameter by name
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' :
+            decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Get username from URL parameter
+        var username = getUrlParameter('username');
+        
+        // Get password from URL parameter
+        var password = getUrlParameter('password');
+
+        // Display username
+        document.write('<h1>Welcome, ' + username + '!<h1>');
+    </script>
     <div class="dashboard">
-        <h1>Welcome, User!</h1>
+        <!--<h1>Welcome, User!</h1>-->
         <div class="account">
             <h2>Checking Account</h2>
             <p>Balance: $5000</p>

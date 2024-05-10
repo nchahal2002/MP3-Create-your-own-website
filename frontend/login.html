@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
         <link rel="stylesheet" href="assests/css/style.css" type="text/css">
+        <script src="backend/config/config.js"></script>
     </head>
     <body>
         <nav>
@@ -22,13 +23,14 @@
         </nav>
         <main>
             <h2>Login Form</h2>
-            <form action="/login" method="post">
+            <form action="C:\Users\nchah\class1\html\Activity18\MP3-Create-your-own-website\backend\dashboard.html" method="get">
                 <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="name" required>
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <button type="submit" value="Login">Login</button>
+                    <label for="username"><b>Enter your username</b></label>
+                    <input type="text" id='username' name="username" required>
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="password" name="password" required>
+                    <!--<button type="submit" value="Login">Login</button>-->
+                    <input type="submit" value="Submit">
                 </div>
             </form>
             
@@ -36,7 +38,7 @@
         </main>
         <ul>
             <li>
-                <a href="signup.html">If you are not a member, click here to signup</a>
+                <a href="C:\Users\nchah\class1\html\Activity18\MP3-Create-your-own-website\frontend\signup.html">If you are not a member, click here to signup</a>
             </li>
         </ul>
     </body>
